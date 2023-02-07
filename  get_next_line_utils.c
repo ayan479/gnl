@@ -6,7 +6,20 @@
 /*   By: mayan <mayan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:18:37 by mayan             #+#    #+#             */
-/*   Updated: 2023/02/02 13:18:38 by mayan            ###   ########.fr       */
+/*   Updated: 2023/02/07 14:21:01 by mayan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "get_next_line.h"
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
