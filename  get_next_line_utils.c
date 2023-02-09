@@ -6,7 +6,7 @@
 /*   By: mayan <mayan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:18:37 by mayan             #+#    #+#             */
-/*   Updated: 2023/02/07 18:21:15 by mayan            ###   ########.fr       */
+/*   Updated: 2023/02/09 13:41:39 by mayan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_memcpy(tab, s1, len1);
 	ft_memcpy(tab + len1, s2, len2 + 1);
 	return (tab);
-}
-
-                                                                                                                                                                                                                                                                                                                                        
+}                                                                                                                                                                                                                                                                                                                                 
