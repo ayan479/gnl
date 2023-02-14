@@ -6,7 +6,7 @@
 /*   By: mayan <mayan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:19:04 by mayan             #+#    #+#             */
-/*   Updated: 2023/02/08 19:44:01 by mayan            ###   ########.fr       */
+/*   Updated: 2023/02/10 12:11:52 by mayan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 #  define BUFFER_SIZE 42
 # endif
 
-char    *get_next_line(int fd);
-
+char	*get_next_line(int fd);
 
 #endif

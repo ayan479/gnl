@@ -6,7 +6,7 @@
 /*   By: mayan <mayan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 14:40:26 by mayan             #+#    #+#             */
-/*   Updated: 2023/02/09 15:22:03 by mayan            ###   ########.fr       */
+/*   Updated: 2023/02/13 14:18:00 by mayan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int main(void)
 		// of the last character in the string
 		buf[nb_read] = '\0';
 		// Print the buffer contents after read
-		printf("\e[0m%d : [\e[37\e[107m%s\e[0m]\e[102m\n", count, buf);
+		printf("\e[0m%d :%s\n", count, buf);
 		count++;
 	}
 //	Close the opened file descriptor
