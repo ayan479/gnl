@@ -6,7 +6,7 @@
 /*   By: mayan <mayan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:18:19 by mayan             #+#    #+#             */
-/*   Updated: 2023/02/14 20:54:23 by mayan            ###   ########.fr       */
+/*   Updated: 2023/02/16 19:17:24 by mayan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,36 @@ char	*get_next_line(int fd)
 	if (!buffer)
 		return (NULL);
 	line = ft_getline(buffer);
-	buffer = ft_remaining(buffer);
+	buffer = ft_next(buffer);
 	return (line);
+}
+
+int	main(void)
+{
+	char	*line;
+	int		i;
+	int		fd1;
+	// int		fd2;
+	// int		fd3;
+	fd1 = open("text.txt", O_RDONLY);
+	// fd2 = open("tests/test2.txt", O_RDONLY);
+	// fd3 = open("tests/test3.txt", O_RDONLY);
+	i = 1;
+	while (i < 8)
+	{
+		line = get_next_line(fd1);
+		printf("line[%02d]: %s", i, line);
+		free(line);
+		// line = get_next_line(fd2);
+		// printf("line [%02d]: %s", i, line);
+		// free(line);
+		// line = get_next_line(fd3);
+		// printf("line [%02d]: %s", i, line);
+		// free(line);
+		i++;
+	}
+	close(fd1);
+	// close(fd2);
+	// close(fd3);
+	return (0);
 }
