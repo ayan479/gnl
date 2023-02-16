@@ -6,7 +6,7 @@
 /*   By: mayan <mayan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:18:19 by mayan             #+#    #+#             */
-/*   Updated: 2023/02/16 19:17:24 by mayan            ###   ########.fr       */
+/*   Updated: 2023/02/16 21:19:10 by mayan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,3 +80,4 @@ int	main(void)
 	// close(fd3);
 	return (0);
 }
+// cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c  get_next_line.h get_next_line_utils.c && ./a.out
