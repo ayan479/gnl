@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayan <mayan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:18:19 by mayan             #+#    #+#             */
-/*   Updated: 2023/02/18 12:26:13 by mayan            ###   ########.fr       */
+/*   Updated: 2023/02/18 18:17:36 by mayan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,16 @@ char	*ft_read(int fd, char *buffer)
 
 char	*get_next_line(int fd)
 {
-	static char	*buffer;
+	static char	*buffer[4096];
 	char		*line;
 
 	if (BUFFER_SIZE > 2147483646 || BUFFER_SIZE <= 0 || fd < 0)
 		return (0);
-	buffer = ft_read(fd, buffer);
-	if (!buffer)
+	buffer[fd] = ft_read(fd, buffer[fd]);
+	if (!buffer[fd])
 		return (NULL);
-	line = ft_getline(buffer);
-	buffer = ft_next(buffer);
+	line = ft_getline(buffer[fd]);
+	buffer[fd] = ft_next(buffer[fd]);
 	return (line);
 }
 
@@ -59,16 +59,28 @@ char	*get_next_line(int fd)
 // 	char	*line;
 // 	int		i;
 // 	int		fd1;
+// 	int		fd2;
+// 	int		fd3;
 
-// 	fd1 = open("text.txt", O_RDONLY);
+// 	fd1 = open("tests/test.txt", O_RDONLY);
+// 	fd2 = open("tests/test2.txt", O_RDONLY);
+// 	fd3 = open("tests/test3.txt", O_RDONLY);
 // 	i = 1;
-// 	while (i < 8)
+// 	while (i < 7)
 // 	{
 // 		line = get_next_line(fd1);
-// 		printf("line[%02d]: %s", i, line);
+// 		printf("line [%02d]: %s", i, line);
+// 		free(line);
+// 		line = get_next_line(fd2);
+// 		printf("line [%02d]: %s", i, line);
+// 		free(line);
+// 		line = get_next_line(fd3);
+// 		printf("line [%02d]: %s", i, line);
 // 		free(line);
 // 		i++;
 // 	}
 // 	close(fd1);
+// 	close(fd2);
+// 	close(fd3);
 // 	return (0);
 // }

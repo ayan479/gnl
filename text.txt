@@ -4,3 +4,4 @@ as the domestic cat or house cat to distinguish it from the wild members of the 
 A cat can either be a house cat, a farm cat, or a feral cat; the latter ranges freely and avoids human contact.
 Domestic cats are valued by humans for companionship and their ability to kill rodents. 
 About 60 cat breeds are recognized by various cat registries.
+// cc -Wall -Wextra -Werror -D s2ER_SIZE=42 get_next_line.c get_next_line.h get_next_line_utils.c && ./a.out
