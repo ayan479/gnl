@@ -6,7 +6,7 @@
 /*   By: mayan <mayan@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 13:18:19 by mayan             #+#    #+#             */
-/*   Updated: 2023/02/18 18:17:36 by mayan            ###   ########.fr       */
+/*   Updated: 2023/02/19 20:28:19 by mayan            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,8 @@ char	*get_next_line(int fd)
 // 	int		fd2;
 // 	int		fd3;
 
-// 	fd1 = open("tests/test.txt", O_RDONLY);
-// 	fd2 = open("tests/test2.txt", O_RDONLY);
+// 	fd1 = open("text.txt", O_RDONLY);
+// 	fd2 = open("text2.txt", O_RDONLY);
 // 	fd3 = open("tests/test3.txt", O_RDONLY);
 // 	i = 1;
 // 	while (i < 7)
